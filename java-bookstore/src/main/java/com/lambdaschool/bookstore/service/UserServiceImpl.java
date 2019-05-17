@@ -51,6 +51,11 @@ public class UserServiceImpl implements UserDetailsService, UserService
         return list;
     }
 
+    public User findUserName(String username) {
+        User user = userrepos.findByUsername(username);
+        return user;
+    }
+
     @Override
     public void delete(long id)
     {
